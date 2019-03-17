@@ -61,6 +61,7 @@ class App extends Component {
   };
 
   // shuffles the array of images
+  // This is a nice shuffle function but it is unnecessary. The shuffle package that you pulled in from npm is doing all this work for you!
   shuffleCards(friends) {
     var i = friends.length,
       j = 0,
@@ -98,6 +99,9 @@ class App extends Component {
             Click on an image to earn points but don't click on any more than
             once!
           </Jumbotron>
+          {/*
+            You are passing in your props correctly, but if you look inside your FriendCard Component you aren't actually invoking that click anywhere!
+          */}
           {this.state.friends.map(friend => (
             <FriendCard
               key={friend.id}
@@ -105,6 +109,8 @@ class App extends Component {
               handleIncrement={this.handleIncrement}
               handleReset={this.handleReset}
               handleShuffle={this.handleShuffle}
+              // The line below will do nothing for you. handleClick does not have a key of shuffleCards attached to it.
+              // If you wanted to use it, it would be this.shuffleCards
               shuffleCards={this.handleClick.shuffleCards}
               id={friend.id}
               image={friend.image}
