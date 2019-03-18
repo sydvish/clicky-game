@@ -2,84 +2,94 @@
     {
       "id": 1,
       "name": "Flowers",
-      "image":
-        "https://i.pinimg.com/236x/2e/d1/0e/2ed10e87aef9ff8d95867978895f2309--mindful-living-beautiful-landscapes.jpg"
-     
+      "image": "https://i.pinimg.com/236x/2e/d1/0e/2ed10e87aef9ff8d95867978895f2309--mindful-living-beautiful-landscapes.jpg",
+      "clicked": false
     },
     {
       "id": 2,
       "name": "Nambia",
       "image":
-        "https://media.mnn.com/assets/images/2013/05/sossuvlei_namibia.jpg"
+        "https://media.mnn.com/assets/images/2013/05/sossuvlei_namibia.jpg",
+        "clicked": false
       
     },
     {
       "id": 3,
       "name": "Hot Spring",
       "image":
-        "http://earthporm.com/wp-content/uploads/2014/01/Grand-Prismatic-Spring-Yellowstone-National-Park-U.S..jpg"
+        "http://earthporm.com/wp-content/uploads/2014/01/Grand-Prismatic-Spring-Yellowstone-National-Park-U.S..jpg",
+        "clicked": false
     
     },
     {
       "id": 4,
       "name": "Taj Mahal",
       "image":
-        "https://cdn.lifehack.org/wp-content/uploads/2015/05/rsz_taj_mahal_india.jpg"
+        "https://cdn.lifehack.org/wp-content/uploads/2015/05/rsz_taj_mahal_india.jpg",
+        "clicked": false
       
     },
     {
       "id": 5,
       "name": "Redeemer",
       "image":
-        "https://www.pandotrip.com/wp-content/uploads/2018/03/View-of-Christ-The-Redeemer-Statue-and-people-visiting-Corcovado-Hill.jpg"
+        "https://www.pandotrip.com/wp-content/uploads/2018/03/View-of-Christ-The-Redeemer-Statue-and-people-visiting-Corcovado-Hill.jpg",
+        "clicked": false
     },
     {
       "id": 6,
       "name": "Golden Gate",
       "image":
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEMNsqTTW9BPPlg2R_f9iEe5ZG4YnfBS4i1Dk_ePyCIzZRq550zA"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEMNsqTTW9BPPlg2R_f9iEe5ZG4YnfBS4i1Dk_ePyCIzZRq550zA",
+        "clicked": false
      
     },
     {
       "id": 7,
       "name": "Pyramids",
       "image":
-        "http://www.bestourism.com/img/items/big/118/The-Pyramids-_Giza-Pyramids-at-sunset_3711.jpg"
+        "http://www.bestourism.com/img/items/big/118/The-Pyramids-_Giza-Pyramids-at-sunset_3711.jpg",
+        "clicked": false
      
     },
     {
       "id": 8,
       "name": "Eiffel Tower",
       "image":
-        "https://i.imgur.com/dStHMTN.jpg"
+        "https://i.imgur.com/dStHMTN.jpg",
+        "clicked": false
    
     },
     {
       "id": 9,
       "name": "Iceberg",
       "image":
-        "https://i.pinimg.com/originals/d5/fd/63/d5fd637f015090d9c9ec6bf7e4c1b42e.jpg"
+        "https://i.pinimg.com/originals/d5/fd/63/d5fd637f015090d9c9ec6bf7e4c1b42e.jpg",
+        "clicked": false
       
     },
     {
       "id": 10,
       "name": "Watchman",
       "image":
-        "http://www.mhsmantra.com/wp-content/uploads/2018/01/watchman-zion-national-park.jpg"
+        "http://www.mhsmantra.com/wp-content/uploads/2018/01/watchman-zion-national-park.jpg",
+        "clicked": false
       
     },
     {
       "id": 11,
       "name": "Yosemite",
       "image":
-        "http://cdn.mntm.me/cd/34/bc/Top-5-FamilyFriendly-National-Parks-in-Canada-cd34bc42eb124366a237436857238888.jpg"
+        "http://cdn.mntm.me/cd/34/bc/Top-5-FamilyFriendly-National-Parks-in-Canada-cd34bc42eb124366a237436857238888.jpg",
+        "clicked": false
       
     },
     {
       "id": 12,
       "name": "Joshua Tree",
       "image":
-        "https://static.toiimg.com/thumb/57405664/.jpg?width=650&height=433&resize=true&resizeMode=5"
+        "https://static.toiimg.com/thumb/57405664/.jpg?width=650&height=433&resize=true&resizeMode=5",
+        "clicked": false
       
     }
   ]

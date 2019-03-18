@@ -5,7 +5,8 @@ import Title from "./components/Title";
 import NavBar from "./components/NavBar";
 import friends from "./friends.json";
 import shuffle from "shuffle-array";
-import Jumbotron from "./components/Title";
+shuffle(friends);
+// import Jumbotron from "./components/Title";
 
 class App extends Component {
   state = {
@@ -16,108 +17,88 @@ class App extends Component {
     clicked: []
   };
 
-  // Shuffles the images when the page is reloaded
-  componentDidMount() {
-    this.handleShuffle();
-  }
+ 
 
   // Updates the scores
   handleIncrement = () => {
     // set newscore variable to equal the current score plus 1
-    const newScore = this.state.currentScore + 1;
+    const newScore = this.state.score + 1;
     this.setState({
-      currentScore: newScore,
+      score: newScore,
       rightWrong: ""
     });
     // if the newscore is greater than or equal to the top score then the newscore becomes the top score
     if (newScore >= this.state.topScore) {
       this.setState({ topScore: newScore });
+      this.setState({ rightWrong: "You beat the top score!" });
       // or the newscore is equal to 12, we pass in "you win" through the empty rightwrong string
     } else if (newScore === 12) {
       this.setState({ rightWrong: "You win!" });
     }
     // then shuffles the array
-    this.shuffleCards();
+    // this.shuffleCards();
   };
 
+  // resets the score and resets the game
   handleReset = () => {
     this.setState({
-      currentScore: 0,
-      topScore: this.state.topScore,
+      score: 0,
+      // topScore: this.state.topScore,
       rightWrong: "Reset",
       clicked: []
     });
-    this.handleShuffle();
+    // this.handleShuffle();
   };
 
-  // 
+  //
   handleClick = id => {
+    const { friends } = this.state;
+    const newFriends = [...friends];
+    shuffle(newFriends);
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
       this.setState({ clicked: this.state.clicked.concat(id) });
     } else {
       this.handleReset();
     }
+    this.setState({friends: newFriends});
   };
 
-  // shuffles the array of images
-  // This is a nice shuffle function but it is unnecessary. The shuffle package that you pulled in from npm is doing all this work for you!
-  shuffleCards(friends) {
-    var i = friends.length,
-      j = 0,
-      temp;
-
-    while (i--) {
-      j = Math.floor(Math.random() * (i + 1));
-
-      temp = friends[i];
-      friends[i] = friends[j];
-      friends[j] = temp;
-    }
-    return friends;
-  }
-  // 
-  handleShuffle = () => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = shuffle(this.state.friends);
-    this.setState({ friends });
-  };
+  // handleShuffle = () => {
+  //   // Filter this.state.friends for friends with an id not equal to the id being removed
+  //   const friends = shuffle(this.state.friends);
+  //   this.setState({ friends });
+  // };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <div>
         <NavBar
-          score={this.state.currentScore}
+          score={this.state.score}
           topScore={this.state.topScore}
           rightWrong={this.state.rightWrong}
         />
         <Wrapper>
-          <Jumbotron>
+          <Title>
             Clicky Game!
             <br />
             Click on an image to earn points but don't click on any more than
             once!
-          </Jumbotron>
-          {/*
-            You are passing in your props correctly, but if you look inside your FriendCard Component you aren't actually invoking that click anywhere!
-          */}
+          </Title>
           {this.state.friends.map(friend => (
             <FriendCard
               key={friend.id}
               handleClick={this.handleClick}
               handleIncrement={this.handleIncrement}
               handleReset={this.handleReset}
-              handleShuffle={this.handleShuffle}
-              // The line below will do nothing for you. handleClick does not have a key of shuffleCards attached to it.
-              // If you wanted to use it, it would be this.shuffleCards
-              shuffleCards={this.handleClick.shuffleCards}
+              // handleShuffle={this.handleShuffle}
+              // shuffleCards={this.shuffleCards}
               id={friend.id}
               image={friend.image}
-              onClick={this.handleShuffle}
+              // onClick={this.handleShuffle}
             />
           ))}
-          <Title />
         </Wrapper>
       </div>
     );
