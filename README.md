@@ -6,6 +6,6 @@ Memory game build using React JS library. Components state is managed to respond
 3. Every time an image is clicked, the images rendered to the page shuffle themselves in a random order.
 4. Once the user's score is reset after an incorrect guess, the game restarts.
 
-
+This project is deployed on heroku, find it here! [Clicky Game](https://warm-citadel-49751.herokuapp.com/)
 
 
